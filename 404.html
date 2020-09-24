@@ -16,14 +16,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/default.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/form.js"></script>
 </head>
 
-<body>
-    <header class="site-header">
-        <div class="navigation">
+<body class="body-404">
+    <header class="half-hero">
+        <div class="navigation sticky">
             <div class="redes-sociales">
                 <nav class="container">
                     <a href="https://www.facebook.com/lineage2/"><i class="fab fa-facebook" aria-hidden="true"></i></a>
@@ -41,21 +40,24 @@
                 </div>
                 <div class="logo logo-black">
                     <a href="/">
-                        <img src="img/l2-color.png" alt="Logo" class="logo">
+                        <img src="img/l2_logo-color.png" alt="Logo" class="logo">
                     </a>
                 </div>
                 <nav>
                     <a href="/info.html">Informaci&oacute;n</a>
-                    <a href="/ranking.html">Ranking</a>
-                    <a href="/news.html">Noticias</a>
-                    <a href="/media.html">Media</a>
-                    <a class="btn white-outline inline" href="/join.html">Regístrate</a>
+                    <a href="/404.html">Ranking</a>
+                    <a href="/404.html">Noticias</a>
+                    <a class="btn white-outline" href="/join.html">Regístrate</a>
+                    <a class="btn golden full" href="/join.html">Regístrate</a>
                 </nav>
             </div>
         </div>
     </header>
-
-
+    <main class="main-404">
+        <h1>¿Acaso te perdiste, humano?</h1>
+        <a class="btn golden full" href="/">¡SALIR CORRIENDO!</a>
+    </main>
+    <div class="success"><i class="far fa-times close"></i><span></span></div>
     <footer>
         <div class="white container">
             <div class="content">
@@ -77,8 +79,8 @@
 
                 <div class="form-wrapper">
                     <h4>Suscr&iacute;bete a nuestro Newsletter</h4>
-                    <form action="">
-                        <input name="email" type="email" placeholder="Your e-mail">
+                    <form id="newsletter" method="post">
+                        <input name="email" type="email" placeholder="Ingresa tu e-mail" required>
                         <button type="submit" class="btn large golden full thin">Suscr&iacute;bete</button>
                     </form>
                 </div>
@@ -86,13 +88,12 @@
             </div>
             <nav class="links">
                 <a href="/info.html">Informaci&oacute;n</a>
-                <a href="/ranking.html">Ranking</a>
-                <a href="/news.html">Noticias</a>
-                <a href="/media.html">Media</a>
+                <a href="/404.html">Ranking</a>
+                <a href="/404.html">Noticias</a>
                 <a href="/join.html">Regístrate</a>
             </nav>
         </div>
-        <p>&copy; 2020 ORT. Proyecto para NUEVAS TECNOLOG&Iacute;AS. 12G Grupo 7 | Vila Pereira - Pereira Sanchez </p>
+        <p>&copy; 2020 ORT. Proyecto para NUEVAS TECNOLOG&Iacute;AS. 12G Grupo 7 | Vila Pereira - Pereira Sanchez. Todo el contenido audio-visual utilizado fue con fines educativos y el derecho corresponde a sus respectivos autores. </p>
     </footer>
 
 </body>

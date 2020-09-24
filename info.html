@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/characters.js"></script>
-
+    <script src="js/form.js"></script>
 </head>
 
 <body>
@@ -45,8 +45,8 @@
                 </div>
                 <nav>
                     <a href="/info.html">Informaci&oacute;n</a>
-                    <a href="/ranking.html">Ranking</a>
-                    <a href="/news.html">Noticias</a>
+                    <a href="/404.html">Ranking</a>
+                    <a href="/404.html">Noticias</a>
                     <a class="btn white-outline" href="/join.html">Regístrate</a>
                     <a class="btn golden full" href="/join.html">Regístrate</a>
                 </nav>
@@ -132,6 +132,7 @@
             </div>
         </div>
     </section>
+    <div class="success"><i class="far fa-times close"></i><span></span></div>
     <footer>
         <div class="white container">
             <div class="content">
@@ -153,8 +154,8 @@
 
                 <div class="form-wrapper">
                     <h4>Suscr&iacute;bete a nuestro Newsletter</h4>
-                    <form action="">
-                        <input name="email" type="email" placeholder="Your e-mail">
+                    <form id="newsletter" method="post">
+                        <input name="email" type="email" placeholder="Ingresa tu e-mail" required>
                         <button type="submit" class="btn large golden full thin">Suscr&iacute;bete</button>
                     </form>
                 </div>
@@ -162,8 +163,8 @@
             </div>
             <nav class="links">
                 <a href="/info.html">Informaci&oacute;n</a>
-                <a href="/ranking.html">Ranking</a>
-                <a href="/news.html">Noticias</a>
+                <a href="/404.html">Ranking</a>
+                <a href="/404.html">Noticias</a>
                 <a href="/join.html">Regístrate</a>
             </nav>
         </div>
