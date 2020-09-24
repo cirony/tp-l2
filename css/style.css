@@ -1061,6 +1061,7 @@ footer.footer-info {
     }
     .navigation.sticky .bar i {
         color: #89640b;
+        margin: 1rem 0;
     }
     .navigation .bar.full nav {
         display: none;
