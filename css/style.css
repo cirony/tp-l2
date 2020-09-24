@@ -222,6 +222,7 @@ header.hero .video-container {
 header.hero .video-container video {
     position: relative;
     min-width: 100%;
+    min-height: 100%;
 }
 
 header.hero .video-overlay {
@@ -704,6 +705,7 @@ footer p {
 .char-showcase .char-selector {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .char-showcase .char-big {
@@ -737,7 +739,7 @@ footer p {
 .avatar {
     height: 100px;
     width: 100px;
-    background-size: contain;
+    background-size: cover;
     margin: 2rem;
     background-color: #00000080;
     background-blend-mode: color;
@@ -803,7 +805,8 @@ body.join {
 
 .join form .form-inputs {
     justify-content: flex-end;
-    color: #89640b;
+    color: #e0ac32;
+    ;
 }
 
 .join form input,
@@ -882,7 +885,204 @@ footer.footer-info {
 }
 
 
-/** 1500 verificar el alto del video**/
+/* MOBILE MENU*/
+
+.menu-mobile {
+    display: none;
+}
 
 
-/** 1250 header mobile**/
+/** RESPONSIVE **/
+
+.js--mobile-nav-icon {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .avatar {
+        margin: 0.5rem;
+    }
+    .join form input,
+    .join form button {
+        width: 100%;
+    }
+    #join-form {
+        width: 100%;
+    }
+    .join-main form {
+        align-items: initial;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 2rem;
+    }
+    .btn.more-info {
+        display: none;
+    }
+    .fotos {
+        display: none;
+    }
+    .noticias .news-container .article-wrapper {
+        padding: 1rem;
+    }
+    footer .links {
+        display: none;
+    }
+    footer .content {
+        padding-bottom: 2rem;
+    }
+    .ratio .over {
+        display: none;
+    }
+    .avatar {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+    header.hero .video-container {
+        display: none;
+    }
+    header.hero {
+        background-image: url(../img/gallery8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .resumen {
+        flex-direction: column;
+        padding: 0;
+    }
+    .resumen li {
+        margin-bottom: 4rem;
+    }
+    .resumen li:last-of-type {
+        margin-bottom: 0;
+    }
+    .noticias {
+        padding: 0 0 2rem 0;
+    }
+    .noticias .news-container {
+        flex-direction: column;
+    }
+    .noticias .news-container article {
+        margin: 0!important;
+    }
+    .noticias .news-container .main-article,
+    .noticias .news-container .other-articles {
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .noticias,
+    .noticias .news-container,
+    .noticias .news-container .main-article,
+    .noticias .news-container .other-articles {
+        height: auto;
+        display: block
+    }
+    .noticias .news-container article,
+    .noticias .news-container article {
+        padding: 10rem;
+    }
+    .aventura {
+        background-size: initial;
+    }
+    .avatar {
+        margin: 1rem;
+    }
+    .char-showcase .char-info.selected {
+        flex-direction: column;
+        align-items: center;
+    }
+    .char-showcase .char-info img {
+        width: 100%;
+    }
+    .ratio .rates-wrapper .numero {
+        font-size: 5rem;
+    }
+    .join form .form-inputs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1250px) {
+    .js--mobile-nav-icon {
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .container {
+        width: 80%;
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav-menu nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .navigation .bar i {
+        font-size: 4rem;
+        cursor: pointer;
+    }
+    .navigation.sticky .bar i {
+        color: #89640b;
+    }
+    .navigation .bar.full nav {
+        display: none;
+    }
+    .navigation .redes-sociales .container {
+        align-items: center;
+        justify-content: center;
+    }
+    header.hero .hero-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+    header .sticky .bar nav a:not(.btn):hover {
+        border: 0;
+    }
+    header .bar nav a:not(.btn) {
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+    }
+    .status-content .human {
+        display: none;
+    }
+    .resumen .numero {
+        font-size: 8rem;
+    }
+    .contador .container {
+        width: 100%;
+    }
+    footer .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .logo {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .ratio .over {
+        margin-left: 10%;
+    }
+}
