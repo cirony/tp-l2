@@ -878,10 +878,14 @@ footer.footer-info {
 }
 
 .main-404 {
-    height: 40vh;
+    height: 100vh;
     color: white;
     text-shadow: 1px 1px black;
     text-align: center;
+}
+
+.main-404 h1 {
+    font-size: 20rem;
 }
 
 
