@@ -424,10 +424,10 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .resumen li {
-    flex-basis: 25%;
     flex-grow: 1;
     text-align: center;
     color: #fff;
@@ -902,6 +902,12 @@ footer.footer-info {
     display: none;
 }
 
+@media (max-width: 500px) {
+    .ratio .rates-wrapper li {
+        font-size: 3rem;
+    }
+}
+
 @media (max-width: 450px) {
     .avatar {
         margin: 0.5rem;
@@ -915,6 +921,9 @@ footer.footer-info {
     }
     .join-main form {
         align-items: initial;
+    }
+    .ratio .rates-wrapper li {
+        font-size: 2rem;
     }
 }
 
@@ -968,15 +977,16 @@ footer.footer-info {
         background-position: center;
         background-attachment: fixed;
     }
-    .resumen {
+    .contador .resumen {
         flex-direction: column;
+    }
+    .resumen {
         padding: 0;
     }
     .resumen li {
         margin-bottom: 4rem;
-    }
-    .resumen li:last-of-type {
-        margin-bottom: 0;
+        flex: 1 0;
+        flex-basis: calc(50% - 2rem);
     }
     .noticias {
         padding: 0 0 2rem 0;
@@ -1021,6 +1031,9 @@ footer.footer-info {
     }
     .join form .form-inputs {
         flex-direction: column;
+    }
+    .ratio .rates-wrapper {
+        width: 100%;
     }
 }
 
@@ -1069,6 +1082,9 @@ footer.footer-info {
     }
     .status-content .human {
         display: none;
+    }
+    .resumen li {
+        margin: 2rem 1rem;
     }
     .resumen .numero {
         font-size: 8rem;
