@@ -57,7 +57,7 @@ $(document).ready(function() {
         if ($(this).find("input[name='password']").val() != hardcodedUser || $(this).find("input[name='password']").val() != harcodedPass) {
             $(".error").show("fast");
         } else {
-            window.location.replace("/views/panel.html");
+            window.location.replace("../views/panel.html");
         }
     });
 
@@ -96,8 +96,8 @@ $(document).ready(function() {
         var race = $(parent).find('input[name="race"]:checked');
         var clase = $(parent).find('input[name="class"]:checked');
         var sex = $(parent).find('select').val();
-        $(parent).find('.character-display img').css('background-image', 'url(/img/classes/' + $(clase).val() + '.png)');
-        $(parent).find('.character-display img').attr('src', '/img/races/' + $(race).val() + '-' + sex + '.png');
+        $(parent).find('.character-display img').css('background-image', 'url(../img/classes/' + $(clase).val() + '.png)');
+        $(parent).find('.character-display img').attr('src', '../img/races/' + $(race).val() + '-' + sex + '.png');
         $(parent).find('.race-name').html($(race).attr('description'));
         $(parent).find('.class-name').html($(clase).attr('description'));
 
@@ -123,13 +123,13 @@ $(document).ready(function() {
 
 function addHeader() {
     if ($('#header-navigation')) {
-        $('#header-navigation').load("/views/common/header-navigation.html");
+        $('#header-navigation').load("../views/common/header-navigation.html");
     }
 };
 
 function addFooter() {
 
-    var footerPath = "/views/common/footer";
+    var footerPath = "../views/common/footer";
     if ($('footer').hasClass('small')) {
         footerPath = footerPath + "-small";
     }
@@ -141,7 +141,7 @@ function loadAccountForm() {
 
     if (getCurrentPage() == 'account.html') {
         var search = new URLSearchParams(window.location.search);
-        $('.form-container').load('/views/account/' + search.get('page') + "-form.html");
+        $('.form-container').load('../views/account/' + search.get('page') + "-form.html");
     } else if (getCurrentPage() == 'panel.html') {
         var search = getSearchParams();
         var setting = search.get('setting');
@@ -152,7 +152,7 @@ function loadAccountForm() {
 
         $('#' + setting).addClass('selected');
 
-        $('.settings-content').load('/views/panel/' + setting + ".html", function() {
+        $('.settings-content').load('../views/panel/' + setting + ".html", function() {
             if (setting == 'news' && search.get('edit')) {
                 loadNews();
             }
