@@ -1323,6 +1323,17 @@ header.ranking {
     height: 75px;
 }
 
+a.delete {
+    font-size: 1rem;
+}
+
+a.delete,
+a.delete:hover,
+a.delete:active,
+a.delete:visited {
+    color: #691818;
+}
+
 
 /** NOTICIA **/
 
