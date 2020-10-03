@@ -122,11 +122,11 @@ $(document).ready(function() {
 });
 
 function isIndex() {
-    return getCurrentPage() != '' || getCurrentPage() != 'index.html';
+    return getCurrentPage() == '' || getCurrentPage() == 'index.html';
 }
 
 function normalizeLinks(id) {
-    if (!isIndex) {
+    if (!isIndex()) {
         $(id + ' a').each(function(ref, ele) {
 
             if ($(ele).attr('href').startsWith('./')) {
