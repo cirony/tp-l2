@@ -121,8 +121,12 @@ $(document).ready(function() {
 
 });
 
+function isIndex() {
+    return getCurrentPage() != '' || getCurrentPage() != 'index.html';
+}
+
 function normalizeLinks(id) {
-    if (getCurrentPage() != '' || getCurrentPage() != 'index.html') {
+    if (!isIndex) {
         $(id + ' a').each(function(ref, ele) {
 
             if ($(ele).attr('href').startsWith('./')) {
@@ -140,7 +144,9 @@ function normalizeLinks(id) {
 
 function addHeader() {
     if ($('#header-navigation')) {
-        $('#header-navigation').load("../views/common/header-navigation.html", function() {
+        var path = isIndex() ? './' : '../';
+
+        $('#header-navigation').load(path + "views/common/header-navigation.html", function() {
             normalizeLinks('#header-navigation');
         });
     }
@@ -148,7 +154,9 @@ function addHeader() {
 
 function addFooter() {
 
-    var footerPath = "../views/common/footer";
+    var path = isIndex() ? './' : '../';
+
+    var footerPath = path + "views/common/footer";
     if ($('footer').hasClass('small')) {
         footerPath = footerPath + "-small";
     }
