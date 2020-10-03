@@ -190,6 +190,7 @@ nav a {
 
 a:hover,
 a:active,
+a:visited,
 nav a:hover,
 nav a:active {
     color: #e0ac32;
@@ -288,10 +289,11 @@ header .navigation .bar .btn.golden {
 
 header.hero .hero-content {
     width: 100%;
-    flex-basis: 50%;
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-bottom: 10vh;
 }
 
 header.hero .hero-content p {
@@ -310,7 +312,7 @@ header.half-hero {
     height: 60vh;
     padding-top: 86px;
     background-position: top center;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
@@ -375,7 +377,7 @@ header .sticky .bar .btn.golden {
 /* HEADER BACKGROUNDS */
 
 header.info {
-    background-image: url(../img/bg-info2.jpg);
+    background-image: url(/img/background/bg-info2.jpg);
 }
 
 
@@ -392,7 +394,7 @@ main {
 /* STATUS */
 
 .status {
-    background-image: url(../img/bg-status-bw-20.png);
+    background-image: url(/img/background/bg-status-bw-20.png);
     text-align: center;
 }
 
@@ -415,7 +417,7 @@ main {
 /* CONTADOR */
 
 .contador {
-    background-image: url(../img/bg-contador.png);
+    background-image: url(/img/background/bg-contador.png);
 }
 
 .resumen {
@@ -463,9 +465,11 @@ main {
     padding: 5rem 0;
     height: 100vh;
     display: flex;
-    background-image: url(../img/bg-news-bw-10.png);
+    background-image: url(/img/background/bg-news-bw-10.png);
     text-align: center;
 }
+
+.news {}
 
 .noticias div,
 .noticias article {
@@ -480,6 +484,11 @@ main {
     justify-content: space-between;
     align-items: stretch;
     flex-direction: row;
+}
+
+.noticias .btn {
+    align-self: center;
+    margin-top: 2rem;
 }
 
 .noticias .news-container .article-wrapper {
@@ -502,7 +511,6 @@ main {
 
 .noticias .news-container .other-articles {
     flex-basis: 40%;
-    margin-right: 3rem;
 }
 
 .noticias .news-container .article-wrapper .article-content {
@@ -524,23 +532,45 @@ main {
     margin-bottom: 3rem;
 }
 
-.noticias .news-container .main-article .party {
-    background-image: url(../img/party.jpg);
+.noticias .news-container .more {
+    flex-direction: row;
+    margin-top: 3rem;
 }
 
-.noticias .news-container .other-articles .work {
-    background-image: url(../img/work.jpg);
+.noticias .news-container .more .article-wrapper {
+    flex-basis: calc(25% - 1.5rem);
+    margin-right: 3rem;
 }
 
-.noticias .news-container .other-articles .asedio {
-    background-image: url(../img/asedio.jpg);
+.noticias .news-container .more .article-wrapper:last-of-type {
+    margin-right: 0;
+}
+
+.noticias .news-container .party {
+    background-image: url(/img/news/party.jpg);
+}
+
+.noticias .news-container .work {
+    background-image: url(/img/news/work.jpg);
+}
+
+.noticias .news-container .asedio {
+    background-image: url(/img/news/asedio.jpg);
+}
+
+.noticias .news-container .navidad {
+    background-image: url(/img/news/navidad.jpg);
+}
+
+.noticias .news-container .verano {
+    background-image: url(/img/news/verano.jpg);
 }
 
 
 /* AVENTURA */
 
 .aventura {
-    background-image: url(../img/bg-aventura.jpg);
+    background-image: url(/img/background/bg-aventura.jpg);
     color: white;
     font-size: 2rem;
     background-color: #00000025;
@@ -582,7 +612,7 @@ main {
 
 footer {
     border-top: #89640b 1rem solid;
-    background: url(../img/footer-20.png);
+    background: url(/img/background/footer-20.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #000;
@@ -641,7 +671,7 @@ footer p {
 /** INFO **/
 
 .info-main {
-    background-image: url(../img/bg-info-10.png);
+    background-image: url(/img/background/bg-info-10.png);
 }
 
 .ratio {
@@ -657,7 +687,7 @@ footer p {
 .ratio .rates-wrapper .resumen {
     padding: 2rem;
     border: 30px solid #1a1515;
-    border-image: url(../img/border.png) 30 round;
+    border-image: url(/img/background/border.png) 30 round;
 }
 
 .ratio .rates-wrapper {
@@ -692,7 +722,7 @@ footer p {
 /** CHARACTERS **/
 
 .characters {
-    background-image: url(../img/bg-info80.png);
+    background-image: url(/img/background/bg-characters.png);
     background-color: #00000020;
     background-blend-mode: overlay;
 }
@@ -736,47 +766,77 @@ footer p {
     border-radius: 0.5rem;
 }
 
-.avatar {
+.select {
     height: 100px;
     width: 100px;
     background-size: cover;
     margin: 2rem;
+    display: flex;
+}
+
+.select.avatar {
     background-color: #00000080;
     background-blend-mode: color;
 }
 
-.avatar.selected,
-.avatar:hover {
+.select.class {
+    opacity: 0.75;
+}
+
+.select.selected,
+.select:hover {
     border: solid 3px #c19224;
     background-blend-mode: normal;
     transform: scale(1.1);
+    opacity: 1;
 }
 
-.avatar.human {
-    background-image: url(../img/race-img_human-fighter-avatar.png);
+.select.avatar.human {
+    background-image: url(/img/races/race-img_human-fighter-avatar.png);
 }
 
-.avatar.elf {
-    background-image: url(../img/race-img_elf-mystic-avatar.png);
+.select.avatar.elf {
+    background-image: url(/img/races/race-img_elf-mystic-avatar.png);
 }
 
-.avatar.dark {
-    background-image: url(../img/race-img_dark-fighter-avatar.png);
+.select.avatar.dark {
+    background-image: url(/img/races/race-img_dark-fighter-avatar.png);
 }
 
-.avatar.orc {
-    background-image: url(../img/race-img_orc-mystic-avatar.png);
+.select.avatar.orc {
+    background-image: url(/img/races/race-img_orc-mystic-avatar.png);
+}
+
+.select.class.paladin {
+    background-image: url(/img/classes/paladin.png);
+    background-color: #13134a;
+}
+
+.select.class.mage {
+    background-image: url(/img/classes/mage.png);
+    background-color: #3e013e;
+}
+
+.select.class.archer {
+    background-image: url(/img/classes/archer.png);
+    background-color: #0b460b;
+}
+
+.select.class.healer {
+    background-image: url(/img/classes/healer.png);
+    background-color: #691818;
 }
 
 
 /** REGISTRO **/
 
 body.join {
-    background-image: url(../img/bg-register.jpg);
+    background-image: url(/img/background/bg-register.jpg);
 }
 
 .join-main {
     padding-bottom: 10rem;
+    min-height: 70vh;
 }
 
 .join-main .container {
@@ -792,29 +852,95 @@ body.join {
     color: #f2f2f2;
 }
 
-.join-main form {
+footer.footer-info {
+    padding: 0;
+    margin: 0;
+    border-top-width: 5px;
+}
+
+.account-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account-links a,
+.account-links a:visited {
+    text-transform: capitalize;
+    margin: 0 1rem;
+    padding-right: 1rem;
+    border-right: solid 1px #614608;
+    color: #e0ac32;
+    transition: color 0.2s;
+}
+
+.account-links a:hover,
+.account-links a:active {
+    color: #fbce66
+}
+
+.account-links a:last-of-type {
+    padding-right: 1rem;
+    border-right: 0px;
+}
+
+
+/** FORM **/
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
-.join form .form-inputs {
+.form-inputs {
     display: flex;
     align-items: center;
-}
-
-.join form .form-inputs {
     justify-content: flex-end;
     color: #e0ac32;
-    ;
+    flex-grow: 1
 }
 
-.join form input,
-.join form button {
+.form-inputs.center {
+    justify-content: center;
+}
+
+.form-inputs.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-inputs.image img {
+    margin: 2rem 0;
+    align-self: flex-end;
+    border: solid 3px #453822;
+    background-color: #a58855;
+}
+
+form input,
+form select,
+form button,
+form textarea,
+form img {
     width: 360px;
 }
 
-.join form input {
+form textarea,
+.form-inputs.image img {
+    min-height: 200px;
+}
+
+form input[type="checkbox"] {
+    width: 2rem;
+}
+
+form input[type="file"] {
+    height: auto;
+}
+
+form input,
+form select {
     color: #bd912b;
     border-radius: 0;
     border: 1px solid #453822;
@@ -824,23 +950,28 @@ body.join {
     transition: .2s linear;
 }
 
-.join form label {
+form input:not([type='password']),
+form select {
+    text-transform: uppercase;
+}
+
+form input.full:not(.btn),
+form select.full {
+    width: 100%;
+}
+
+form label {
     margin-right: 2rem;
 }
 
-.join form input:focus {
+form input:focus,
+form select:focus {
     border-color: #aa8a55;
 }
 
-.join form .error {
+form .error {
     display: none;
     color: red;
-}
-
-footer.footer-info {
-    padding: 0;
-    margin: 0;
-    border-top-width: 5px;
 }
 
 
@@ -872,7 +1003,7 @@ footer.footer-info {
 /** 404 **/
 
 .body-404 {
-    background-image: url(../img/bg-404.jpg);
+    background-image: url(/img/background/bg-404.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -902,6 +1033,305 @@ footer.footer-info {
     display: none;
 }
 
+
+/** PANEL **/
+
+aside {
+    background-color: #f9f9f9;
+}
+
+header.panel {
+    background-image: url(/img/background/bg-panel.jpg);
+    background-position: center top;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px black;
+    height: 30vh;
+}
+
+header.panel .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    padding-bottom: 2rem;
+    border-bottom: solid 1px #61460829;
+}
+
+.information:last-of-type {
+    border: 0;
+}
+
+header.panel .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.panel-main {
+    display: flex;
+    min-height: 70vh;
+    background-image: url(/img/background/bg-info-10.png);
+}
+
+.panel-main .container {
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.panel-main h2 {
+    color: #614608;
+}
+
+.panel-main h3 {
+    color: #bd912b;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.panel-main h4 {
+    color: #e0ac32
+}
+
+.panel-main aside {
+    box-shadow: 0 0 20px 0px black;
+}
+
+aside.panel-navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-right: #89640b 4px solid;
+}
+
+aside.panel-navigation .logo {
+    width: 10rem;
+    margin: 2rem 0;
+}
+
+aside.panel-navigation nav {
+    display: flex;
+    flex-direction: column;
+}
+
+aside.panel-navigation nav a {
+    color: #614608;
+    padding: 2rem;
+    margin: 0;
+    border-bottom: solid 1px #614608;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+aside.panel-navigation nav a i {
+    padding: 0 2rem;
+}
+
+aside.panel-navigation nav a:first-of-type {
+    border-top: solid 1px #614608;
+}
+
+aside.panel-navigation nav a:hover,
+aside.panel-navigation nav a.selected {
+    background-color: #89640b;
+    color: #fff;
+}
+
+.settings-content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.settings-content .feature {
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.settings-content .feature-char {
+    margin-right: 2rem;
+    font-weight: 700;
+    color: #614608;
+}
+
+.chars-wrapper {
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.settings-content .chars-wrapper .char,
+.settings-content .chars-wrapper .border {
+    display: flex;
+    align-items: center;
+    background-color: #1a1515;
+}
+
+.settings-content .chars-wrapper .border {
+    border: 2.5rem solid #1a1515;
+    border-image: url(/img/background/border.png) 30 round;
+}
+
+.settings-content .chars-wrapper .char {
+    margin: 2rem 2rem 0 0;
+    border: 1rem solid #1a1515;
+}
+
+.chars-wrapper .avatar {
+    height: 15rem;
+    width: 15rem;
+}
+
+.chars-wrapper .char .info {
+    margin: 0 2rem;
+}
+
+.settings-content form {
+    width: fit-content;
+    align-items: stretch;
+}
+
+.settings-content label {
+    color: #614608;
+}
+
+.settings-content form input,
+.settings-content form select,
+.settings-content form textarea {
+    color: #1a1515;
+    background-color: #f2f2f2e5;
+}
+
+.settings-content form input[type='radio'] {
+    opacity: 0;
+    height: 100%;
+    margin: 0;
+}
+
+.settings-content form .form-inputs {
+    justify-content: space-between;
+}
+
+.settings-content form .form-inputs.button-wrapper {
+    justify-content: center;
+}
+
+.settings-content form .selector {
+    display: flex;
+}
+
+.settings-content form .selector {
+    margin: 2rem 0;
+}
+
+.settings-content form .select {
+    margin: 0 2rem 0 0;
+    border-radius: 1rem;
+}
+
+.settings-content .character-display {
+    padding: 5rem;
+}
+
+.settings-content .character-display img {
+    background-image: url(/img/classes/Paladin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.settings-content #create-character .description {
+    text-align: center;
+    color: #614608;
+    margin: 0;
+}
+
+.parameters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/** TABLE **/
+
+table {
+    background-color: #f2f2f2e1;
+    border-collapse: collapse;
+}
+
+table,
+td,
+th {
+    border: solid 1px #453822;
+    margin: 0;
+}
+
+th {
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+tr.even {
+    background-color: #d8d8d8;
+}
+
+td {
+    padding: 1rem;
+}
+
+table a i {
+    color: #453822;
+}
+
+table a i:hover {
+    color: #bd912b;
+}
+
+td:first-child {
+    font-weight: 700;
+    font-size: 1.9rem;
+}
+
+
+/* RANKING */
+
+header.ranking {
+    background-image: url(/img/background/bg-contador.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.ranking .content {
+    margin-bottom: 5rem;
+}
+
+.ranking .content h2 {
+    text-align: center;
+}
+
+.ranking-table {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.ranking-table img {
+    height: 75px;
+}
+
+
+/** NOTICIA **/
+
+header.news {
+    background-image: url(/img/news/party.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media (max-width: 500px) {
     .ratio .rates-wrapper li {
         font-size: 3rem;
@@ -912,14 +1342,15 @@ footer.footer-info {
     .avatar {
         margin: 0.5rem;
     }
-    .join form input,
-    .join form button {
+    form input,
+    form button,
+    form select {
         width: 100%;
     }
-    #join-form {
+    form {
         width: 100%;
     }
-    .join-main form {
+    form {
         align-items: initial;
     }
     .ratio .rates-wrapper li {
@@ -928,7 +1359,7 @@ footer.footer-info {
 }
 
 @media (max-width: 650px) {
-    .container {
+    .container:not(.redes-sociales .container) {
         padding: 2rem;
     }
     .btn.more-info {
@@ -968,7 +1399,7 @@ footer.footer-info {
         display: none;
     }
     header.hero {
-        background-image: url(../img/gallery8.jpg);
+        background-image: url(/img/gallery/gallery8.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

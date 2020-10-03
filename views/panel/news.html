@@ -1,0 +1,96 @@
+<h2>Noticias</h2>
+<div class="information">
+    <table>
+        <thead>
+            <th>Título</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+            <th>texto</th>
+            <th>Visible</th>
+            <th>Fecha</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr id="1">
+                <td>¡Cumplimos 2 años!</td>
+                <td>Festejamos nuestro segundo cumplea&ntilde;os con un evento inolvidable. ¿Te lo perdiste? ¡Desc&uacute;brelo aqu&iacute;!</td>
+                <td><img src="/img/news/party.jpg" alt=""></td>
+                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et inventore soluta quod consequuntur in rerum, delectus dolore ratione incidunt architecto? Quas minus incidunt voluptas deleniti cum in quos non quae!</td>
+                <td>SI</td>
+                <td>10/10/2020</td>
+                <td><a href="/views/panel.html?setting=news&edit=true&id=1"><i class="far fa-edit"></a></i>
+                </td>
+            </tr>
+            <tr id="2" class="even">
+                <td>Resultados del Asedio</td>
+                <td>Aquí los resultados de la disputa mensual de los castillos.</td>
+                <td><img src="/img/news/asedio.jpg" alt=""></td>
+                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et inventore soluta quod consequuntur in rerum, delectus dolore ratione incidunt architecto? Quas minus incidunt voluptas deleniti cum in quos non quae!</td>
+                <td>SI</td>
+                <td>05/10/2020</td>
+                <td><a href="/views/panel.html?setting=news&edit=true&id=2"><i class="far fa-edit"></a></i>
+                </td>
+            </tr>
+            <tr id="3">
+                <td>Mantenimiento</td>
+                <td>Te contamos las mejoras realizadas durante el mantenimiento semanal.</td>
+                <td><img src="/img/news/work.jpg" alt=""></td>
+                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et inventore soluta quod consequuntur in rerum, delectus dolore ratione incidunt architecto? Quas minus incidunt voluptas deleniti cum in quos non quae!</td>
+                <td>SI</td>
+                <td>03/10/2020</td>
+                <td><a href="/views/panel.html?setting=news&edit=true&id=3"><i class="far fa-edit"></a></i>
+                </td>
+            </tr>
+            <tr id="4" class="even">
+                <td>¡Feliz navidad!</td>
+                <td>Aprovechamos la ocasión para desearles felices fiestas.</td>
+                <td><img src="/img/news/navidad.jpg" alt=""></td>
+                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et inventore soluta quod consequuntur in rerum, delectus dolore ratione incidunt architecto? Quas minus incidunt voluptas deleniti cum in quos non quae!</td>
+                <td>SI</td>
+                <td>25/09/2020</td>
+                <td><a href="/views/panel.html?setting=news&edit=true&id=4"><i class="far fa-edit"></a></td>
+            </tr>
+            <tr id="5">
+                <td>Evento de Verano</td>
+                <td>¿Calor? Descubre el evento del verano y refréscate.</td>
+                <td><img src="/img/news/verano.jpg" alt=""></td>
+                <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et inventore soluta quod consequuntur in rerum, delectus dolore ratione incidunt architecto? Quas minus incidunt voluptas deleniti cum in quos non quae!</td>
+                <td>SI</td>
+                <td>20/08/2020</td>
+                <td><a href="/views/panel.html?setting=news&edit=true&id=5"><i class="far fa-edit"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="information">
+    <h3>Nueva Noticia</h3>
+    <form id="news-edit" method="post">
+        <input id="id" type="hidden">
+        <div class="form-inputs">
+            <label for="title">Título</label>
+            <input name="title" id="title" type="text" required>
+        </div>
+        <div class="form-inputs">
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" minlength="10" maxlength="100" required></textarea>
+        </div>
+        <div class="form-inputs image">
+            <img src="" alt="">
+            <div class="form-inputs">
+                <label for="file">Imagen</label>
+                <input type="file" id="file" name="file">
+            </div>
+        </div>
+        <div class="form-inputs">
+            <label for="text">Texto</label>
+            <textarea name="text" id="text" minlength="100" required></textarea>
+        </div>
+        <div class="form-inputs">
+            <label for="checkbox">Visible</label>
+            <input name="checkbox" id="checkbox" type="checkbox">
+        </div>
+        <div class="form-inputs button-wrapper">
+            <input class="btn golden full" type="submit" value="Publicar">
+        </div>
+    </form>
+</div>

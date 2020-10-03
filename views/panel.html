@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineage 2 | Classic</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- CSS para normalizar estilos preseteados, un poquito de trampa :D-->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/default.js"></script>
+    <script src="/js/panel.js"></script>
+</head>
+
+<body>
+    <header class="panel">
+        <div class="container">
+            <div class="texto-hero">
+                <h1>Panel de Control</h1>
+            </div>
+        </div>
+    </header>
+    <main class="panel-main">
+        <aside class="panel-navigation">
+            <img src="/img/logos/b-logo.png" alt="Logo" class="logo">
+            <nav>
+                <a id="summary" href="/views/panel.html?setting=summary">Cuenta<i class="fas fa-angle-right"></i></a>
+                <a id="new-character" href="/views/panel.html?setting=new-character">Crear Personaje<i class="fas fa-angle-right"></i></a>
+                <a id="change-password" href="/views/panel.html?setting=change-password">Cambiar Contraseña<i class="fas fa-angle-right"></i></a>
+                <a id="news" href="/views/panel.html?setting=news">Noticias<i class="fas fa-angle-right"></i></a>
+                <a id="news" href="/">Salir</a>
+            </nav>
+            </div>
+        </aside>
+        <div class="container">
+            <div class="settings-content"></div>
+        </div>
+    </main>
+    <div class="success"><i class="far fa-times close"></i><span></span></div>
+    <footer class="footer-info small"></footer>
+</body>
+
+</html>

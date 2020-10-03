@@ -1,0 +1,40 @@
+<h2>Crear Personaje</h2>
+<div class="parameters">
+    <form id="create-character" method="post">
+        <h3>Elige Nombre</h3>
+        <div class="form-inputs">
+            <input class="full" name="name" type="text" required>
+        </div>
+        <h3>Selecciona Sexo</h3>
+        <div class="form-inputs">
+            <select class="full" name="sex" type="text" required>
+                <option value="female">Femenino</option>
+                <option value="male">Masculino</option>
+            </select>
+        </div>
+        <h3>Selecciona Raza</h3>
+        <div class="char-selector selector">
+            <div class="select avatar human selected"><input type="radio" id="human" name="race" value="human" checked description="Humano"></div>
+            <div class="select avatar elf"><input type="radio" id="elf" name="race" value="elf" description="Elfo"></div>
+            <div class="select avatar dark"><input type="radio" id="dark" name="race" value="dark" description="Elfo Oscuro"></div>
+            <div class="select avatar orc"><input type="radio" id="orc" name="race" value="orc" description="Orco"></div>
+        </div>
+        <h4 class="description race-name">Humano</h4>
+        <h3>Selecciona Clase</h3>
+        <div class="class-selector selector">
+            <div class="select class paladin selected"><input type="radio" id="paladin" name="class" value="paladin" checked description="Paladin"></div>
+            <div class="select class mage"><input type="radio" id="mage" name="class" value="mage" description="Mago"></div>
+            <div class="select class archer"><input type="radio" id="archer" name="class" value="archer" description="Arquero"></div>
+            <div class="select class healer"><input type="radio" id="healer" name="class" value="healer" description="Sanador"></div>
+
+        </div>
+        <h4 class="description class-name">Paladin</h4>
+        <div class="form-inputs button-wrapper">
+            <input class="btn golden full" type="submit" value="Crear">
+        </div>
+        <p class="error">Elige todos los parámetros.</p>
+    </form>
+    <div class="character-display">
+        <img src="/img/races/human-female.png" alt="">
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<h1 class="yellow">REGISTRO</h1>
+<p>Estas a un click de unirte a la aventura m&aacute;s grande del mundo fant&aacute;stico. Ingresa un e-mail v&aacute;lido ya que este queda vinculado a tu cuenta principal y se te pedira validar el mismo al termino del registro.</p>
+<form id="join-form" method="post">
+    <div class="form-inputs"><label for="user">Usuario: </label>
+        <input name="user" type="text" required>
+    </div>
+    <div class="form-inputs">
+        <label for="password">Contrase&ntilde;a</label>
+        <input name="password" id="password" type="password" required>
+    </div>
+    <div class="form-inputs">
+        <label for="password2">Reingrese Contrase&ntilde;a</label>
+        <input name="password2" id="password2" type="password" required>
+    </div>
+    <div class="form-inputs">
+        <label for="email">E-mail</label>
+        <input name="email" id="email" type="email" required>
+    </div>
+    <div class="form-inputs center">
+        <input class="btn golden full" type="submit" value="Enviar">
+    </div>
+    <p class="error">La contrase&ntilde;a no concide. Por favor, corregir.</p>
+</form>
+<p class="account-links">Panel de usuario<a href="/views/account.html?page=login">Ingresar</a>¿Problemas para ingresar?<a href="/views/account.html?page=forgot-password">Recuperar contrase&ntilde;a</a></p>
