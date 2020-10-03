@@ -121,19 +121,28 @@ $(document).ready(function() {
 
 });
 
+function normalizeLinks(id) {
+    if (getCurrentPage() != '' || getCurrentPage() != 'index.html') {
+        $(id + ' a').each(function(ref, ele) {
+
+            if ($(ele).attr('href').startsWith('./')) {
+                $(ele).attr('href', "." + $(ele).attr('href'))
+            }
+        });
+        $(id + ' img').each(function(ref, ele) {
+            if ($(ele).attr('src').startsWith('./')) {
+                $(ele).attr('src', "." + $(ele).attr('src'));
+            }
+
+        });
+    }
+}
+
 function addHeader() {
     if ($('#header-navigation')) {
-        $('#header-navigation').load("../views/common/header-navigation.html");
-
-        if (getCurrentPage() != '' || getCurrentPage() != 'index.html') {
-            $('#header-navigation nav a').each(function(ref) {
-                $(ref).attr('href', "." + $(ref).attr('href').val())
-            });
-
-            $('#header-navigation nav img').each(function(ref) {
-                $(ref).attr('src', "." + $(ref).attr('src').val())
-            });
-        }
+        $('#header-navigation').load("../views/common/header-navigation.html", function() {
+            normalizeLinks('#header-navigation');
+        });
     }
 };
 
@@ -144,7 +153,9 @@ function addFooter() {
         footerPath = footerPath + "-small";
     }
 
-    $('footer').load(footerPath + ".html");
+    $('footer').load(footerPath + ".html", function() {
+        normalizeLinks('footer');
+    });
 }
 
 function loadAccountForm() {
