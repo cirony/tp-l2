@@ -969,9 +969,11 @@ form select:focus {
     border-color: #aa8a55;
 }
 
-form .error {
+form p.error,
+.join-main .container p.error {
     display: none;
     color: red;
+    min-width: 100%;
 }
 
 
