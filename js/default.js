@@ -124,6 +124,16 @@ $(document).ready(function() {
 function addHeader() {
     if ($('#header-navigation')) {
         $('#header-navigation').load("../views/common/header-navigation.html");
+
+        if (getCurrentPage() != '' || getCurrentPage() != 'index.html') {
+            $('#header-navigation nav a').each(function(ref) {
+                $(ref).attr('href', "." + $(ref).attr('href').val())
+            });
+
+            $('#header-navigation nav img').each(function(ref) {
+                $(ref).attr('src', "." + $(ref).attr('src').val())
+            });
+        }
     }
 };
 
@@ -161,7 +171,8 @@ function loadAccountForm() {
 }
 
 function getCurrentPage() {
-    return document.location.pathname.match(/[^\/]+$/)[0];
+
+    return document.location.pathname.match(/[^\/]+$/) != null ? document.location.pathname.match(/[^\/]+$/)[0] : '';
 }
 
 function getSearchParams() {
