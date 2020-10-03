@@ -377,7 +377,7 @@ header .sticky .bar .btn.golden {
 /* HEADER BACKGROUNDS */
 
 header.info {
-    background-image: url(/img/background/bg-info2.jpg);
+    background-image: url(../img/background/bg-info2.jpg);
 }
 
 
@@ -394,7 +394,7 @@ main {
 /* STATUS */
 
 .status {
-    background-image: url(/img/background/bg-status-bw-20.png);
+    background-image: url(../img/background/bg-status-bw-20.png);
     text-align: center;
 }
 
@@ -417,7 +417,7 @@ main {
 /* CONTADOR */
 
 .contador {
-    background-image: url(/img/background/bg-contador.png);
+    background-image: url(../img/background/bg-contador.png);
 }
 
 .resumen {
@@ -465,7 +465,7 @@ main {
     padding: 5rem 0;
     height: 100vh;
     display: flex;
-    background-image: url(/img/background/bg-news-bw-10.png);
+    background-image: url(../img/background/bg-news-bw-10.png);
     text-align: center;
 }
 
@@ -547,30 +547,30 @@ main {
 }
 
 .noticias .news-container .party {
-    background-image: url(/img/news/party.jpg);
+    background-image: url(../img/news/party.jpg);
 }
 
 .noticias .news-container .work {
-    background-image: url(/img/news/work.jpg);
+    background-image: url(../img/news/work.jpg);
 }
 
 .noticias .news-container .asedio {
-    background-image: url(/img/news/asedio.jpg);
+    background-image: url(../img/news/asedio.jpg);
 }
 
 .noticias .news-container .navidad {
-    background-image: url(/img/news/navidad.jpg);
+    background-image: url(../img/news/navidad.jpg);
 }
 
 .noticias .news-container .verano {
-    background-image: url(/img/news/verano.jpg);
+    background-image: url(../img/news/verano.jpg);
 }
 
 
 /* AVENTURA */
 
 .aventura {
-    background-image: url(/img/background/bg-aventura.jpg);
+    background-image: url(../img/background/bg-aventura.jpg);
     color: white;
     font-size: 2rem;
     background-color: #00000025;
@@ -612,7 +612,7 @@ main {
 
 footer {
     border-top: #89640b 1rem solid;
-    background: url(/img/background/footer-20.png);
+    background: url(../img/background/footer-20.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #000;
@@ -671,7 +671,7 @@ footer p {
 /** INFO **/
 
 .info-main {
-    background-image: url(/img/background/bg-info-10.png);
+    background-image: url(../img/background/bg-info-10.png);
 }
 
 .ratio {
@@ -687,7 +687,7 @@ footer p {
 .ratio .rates-wrapper .resumen {
     padding: 2rem;
     border: 30px solid #1a1515;
-    border-image: url(/img/background/border.png) 30 round;
+    border-image: url(../img/background/border.png) 30 round;
 }
 
 .ratio .rates-wrapper {
@@ -722,7 +722,7 @@ footer p {
 /** CHARACTERS **/
 
 .characters {
-    background-image: url(/img/background/bg-characters.png);
+    background-image: url(../img/background/bg-characters.png);
     background-color: #00000020;
     background-blend-mode: overlay;
 }
@@ -792,38 +792,38 @@ footer p {
 }
 
 .select.avatar.human {
-    background-image: url(/img/races/race-img_human-fighter-avatar.png);
+    background-image: url(../img/races/race-img_human-fighter-avatar.png);
 }
 
 .select.avatar.elf {
-    background-image: url(/img/races/race-img_elf-mystic-avatar.png);
+    background-image: url(../img/races/race-img_elf-mystic-avatar.png);
 }
 
 .select.avatar.dark {
-    background-image: url(/img/races/race-img_dark-fighter-avatar.png);
+    background-image: url(../img/races/race-img_dark-fighter-avatar.png);
 }
 
 .select.avatar.orc {
-    background-image: url(/img/races/race-img_orc-mystic-avatar.png);
+    background-image: url(../img/races/race-img_orc-mystic-avatar.png);
 }
 
 .select.class.paladin {
-    background-image: url(/img/classes/paladin.png);
+    background-image: url(../img/classes/paladin.png);
     background-color: #13134a;
 }
 
 .select.class.mage {
-    background-image: url(/img/classes/mage.png);
+    background-image: url(../img/classes/mage.png);
     background-color: #3e013e;
 }
 
 .select.class.archer {
-    background-image: url(/img/classes/archer.png);
+    background-image: url(../img/classes/archer.png);
     background-color: #0b460b;
 }
 
 .select.class.healer {
-    background-image: url(/img/classes/healer.png);
+    background-image: url(../img/classes/healer.png);
     background-color: #691818;
 }
 
@@ -831,7 +831,7 @@ footer p {
 /** REGISTRO **/
 
 body.join {
-    background-image: url(/img/background/bg-register.jpg);
+    background-image: url(../img/background/bg-register.jpg);
 }
 
 .join-main {
@@ -1003,7 +1003,7 @@ form .error {
 /** 404 **/
 
 .body-404 {
-    background-image: url(/img/background/bg-404.jpg);
+    background-image: url(../img/background/bg-404.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -1041,7 +1041,7 @@ aside {
 }
 
 header.panel {
-    background-image: url(/img/background/bg-panel.jpg);
+    background-image: url(../img/background/bg-panel.jpg);
     background-position: center top;
     display: flex;
     text-align: center;
@@ -1075,7 +1075,7 @@ header.panel .nav-menu {
 .panel-main {
     display: flex;
     min-height: 70vh;
-    background-image: url(/img/background/bg-info-10.png);
+    background-image: url(../img/background/bg-info-10.png);
 }
 
 .panel-main .container {
@@ -1173,7 +1173,7 @@ aside.panel-navigation nav a.selected {
 
 .settings-content .chars-wrapper .border {
     border: 2.5rem solid #1a1515;
-    border-image: url(/img/background/border.png) 30 round;
+    border-image: url(../img/background/border.png) 30 round;
 }
 
 .settings-content .chars-wrapper .char {
@@ -1238,7 +1238,7 @@ aside.panel-navigation nav a.selected {
 }
 
 .settings-content .character-display img {
-    background-image: url(/img/classes/Paladin.png);
+    background-image: url(../img/classes/Paladin.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -1300,7 +1300,7 @@ td:first-child {
 /* RANKING */
 
 header.ranking {
-    background-image: url(/img/background/bg-contador.png);
+    background-image: url(../img/background/bg-contador.png);
     background-position: center;
     background-size: cover;
 }
@@ -1327,7 +1327,7 @@ header.ranking {
 /** NOTICIA **/
 
 header.news {
-    background-image: url(/img/news/party.jpg);
+    background-image: url(../img/news/party.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -1399,7 +1399,7 @@ header.news {
         display: none;
     }
     header.hero {
-        background-image: url(/img/gallery/gallery8.jpg);
+        background-image: url(../img/gallery/gallery8.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
