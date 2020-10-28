@@ -383,6 +383,10 @@ header.info {
 
 /* MOBILE NAV*/
 
+.js--mobile-nav-icon {
+    display: none;
+}
+
 
 /* MAIN */
 
